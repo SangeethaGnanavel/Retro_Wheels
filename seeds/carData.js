@@ -26,18 +26,6 @@ const cardata = [
     filename: "Audi_Sedan_Black.jpg",
   },
   {
-    name: "Audi_Ex",
-    type_id: 2,
-    brand_id: 1,
-    price: 35000,
-    colour: "Blue",
-    reserved: false,
-    user_id: null,
-    kilometers: 20000,
-    manufacture_year: 2019,
-    filename: "Audi_Sedan_blue.jpg",
-  },
-  {
     name: "Audi_SUV",
     type_id: 3,
     brand_id: 1,
@@ -96,6 +84,18 @@ const cardata = [
     kilometers: 200000,
     manufacture_year: 2018,
     filename: "Ford_Suv_green.jpg",
+  },
+  {
+    name: "Subaru_SUV",
+    type_id: 3,
+    brand_id: 15,
+    price: 25000,
+    colour: "Red",
+    reserved: false,
+    user_id: null,
+    kilometers: 200000,
+    manufacture_year: 2019,
+    filename: "Subaru_SUV_Red.png",
   },
 ];
 
