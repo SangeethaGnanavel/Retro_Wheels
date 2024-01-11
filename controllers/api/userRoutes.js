@@ -28,6 +28,7 @@ router.post("/login", async (req, res) => {
     const dbUserData = await User.findOne({
       where: {
         email: req.body.email,
+        password: req.body.password,
       },
     });
 
@@ -37,15 +38,15 @@ router.post("/login", async (req, res) => {
         .json({ message: "Incorrect email or password. Please try again!" });
       return;
     }
+    console.log("Inside Login pgae");
+    // const validPassword = await dbUserData.checkPassword(req.body.password);
 
-    const validPassword = await dbUserData.checkPassword(req.body.password);
-
-    if (!validPassword) {
-      res
-        .status(400)
-        .json({ message: "Incorrect email or password. Please try again!" });
-      return;
-    }
+    // if (!validPassword) {
+    //   res
+    //     .status(400)
+    //     .json({ message: "Incorrect email or password. Please try again!" });
+    //   return;
+    // }
 
     // Once the user successfully logs in, set up the sessions variable 'loggedIn'
     req.session.save(() => {
