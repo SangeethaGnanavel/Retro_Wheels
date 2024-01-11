@@ -3,7 +3,7 @@ const sequelize = require("../config/connection"); // fix this
 
 class Brand extends Model {}
 
-Type.init(
+Brand.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -22,7 +22,7 @@ Type.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "types",
+    modelName: "brands",
   }
 );
 
