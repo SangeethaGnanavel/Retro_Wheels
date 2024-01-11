@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-md-5">
+    <h1>Car Listings</h1>
+    <div class="car-listing">
+      {{#each cars}}
+        <div class="car">
+          <img src="{{image}}" alt="{{altText}}">
+          <h3>{{brand}}</h3>
+          <p>Type: {{type}}</p>
+          <p>Price: ${{price}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
+  <div class="col-md-7">
+    <h2>Search Cars</h2>
+    <div class="p-3">
+      <form class="form search-form">
+        <div class="form-group">
+          <label for="brand-search">Brand:</label>
+          <select class="form-input" id="brand-search">
+            <option value="brand1">Ford</option>
+            <option value="brand2">Toyota</option>
+            <option value="brand2">GMC</option>
+            <option value="brand2">Hyundai</option>
+            <!-- Add more brands as needed -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="type-search">Type:</label>
+          <select class="form-input" id="type-search">
+            <option value="sedan">Sedan</option>
+            <option value="suv">SUV</option>
+            <option value="sedan">Hatchback</option>
+            <option value="suv">Truck</option>
+            <!-- Add more types as needed -->
+          </select>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
