@@ -20,16 +20,16 @@ Car.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'types',
-        key: 'id',
+        model: "types",
+        key: "id",
       },
     },
     brand_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'brands',
-        key: 'id',
+        model: "brands",
+        key: "id",
       },
     },
     price: {
@@ -47,10 +47,9 @@ Car.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
-        model: 'users',
-        key: 'id',
+        model: "users",
+        key: "id",
       },
     },
     kilometers: {
@@ -58,8 +57,12 @@ Car.init(
       allowNull: true,
     },
     manufacture_year: {
-      type: DataTypes.INTEGER, 
-      allowNull: true, 
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
