@@ -38,7 +38,7 @@ router.post("/login", async (req, res) => {
         .json({ message: "Incorrect email or password. Please try again!" });
       return;
     }
-    console.log("Inside Login pgae");
+    console.log("Inside Login page");
     const validPassword = await dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
