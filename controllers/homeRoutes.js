@@ -28,4 +28,7 @@ router.get("/all", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+router.get("/")
 module.exports = router;
