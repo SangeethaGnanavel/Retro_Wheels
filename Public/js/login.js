@@ -1,5 +1,3 @@
-
-
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -14,6 +12,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
+      console.log("Load All Handler");
       document.location.replace("/all");
     } else {
       alert("Failed to log in.");
@@ -55,9 +54,3 @@ document
 document
   .querySelector(".signup-form")
   .addEventListener("submit", signupFormHandler);
-
-
-
-
-
-
