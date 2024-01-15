@@ -4,7 +4,7 @@ const cardata = [
   {
     name: "Acura MDX",
     type_id: 3,
-    brand_id: 1,
+    brand_id: 6,
     price: 40000,
     colour: "Red",
     reserved: false,
@@ -16,7 +16,7 @@ const cardata = [
   {
     name: "Audi A3",
     type_id: 2,
-    brand_id: 2,
+    brand_id: 1,
     price: 30000,
     colour: "Black",
     reserved: false,
@@ -28,7 +28,7 @@ const cardata = [
   {
     name: "Audi Q3",
     type_id: 3,
-    brand_id: 2,
+    brand_id: 1,
     price: 30000,
     colour: "Black",
     reserved: false,
@@ -40,7 +40,7 @@ const cardata = [
   {
     name: "Mercedez Benz A class",
     type_id: 2,
-    brand_id: 13,
+    brand_id: 2,
     price: 40000,
     colour: "White",
     reserved: false,
@@ -64,7 +64,7 @@ const cardata = [
   {
     name: "Cadillac XT5",
     type_id: 3,
-    brand_id: 4,
+    brand_id: 5,
     price: 32000,
     colour: "Grey",
     reserved: false,
@@ -76,7 +76,7 @@ const cardata = [
   {
     name: "Ford Escape",
     type_id: 3,
-    brand_id: 6,
+    brand_id: 7,
     price: 25000,
     colour: "Green",
     reserved: false,
@@ -100,7 +100,7 @@ const cardata = [
   {
     name: "Toyota Rav4",
     type_id: 3,
-    brand_id: 16,
+    brand_id: 11,
     price: 35000,
     colour: "Silver",
     reserved: false,
@@ -112,7 +112,7 @@ const cardata = [
   {
     name: "Chevrolet Malibu",
     type_id: 2,
-    brand_id: 5,
+    brand_id: 16,
     price: 5000,
     colour: "Black",
     reserved: false,
@@ -124,7 +124,7 @@ const cardata = [
   {
     name: "Toyota Yaris",
     type_id: 1,
-    brand_id: 16,
+    brand_id: 11,
     price: 1500,
     colour: "Black",
     reserved: false,
@@ -135,8 +135,8 @@ const cardata = [
   },
   {
     name: "Ford Maverick",
-    type_id: 3,
-    brand_id: 6,
+    type_id: 5,
+    brand_id: 7,
     price: 40000,
     colour: "red",
     reserved: false,
