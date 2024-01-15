@@ -1,12 +1,12 @@
 const router = require("express").Router();
 const { Car, Type, Brand } = require("../models");
-// const withAuth = require("../utils/auth");
+const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   res.render("landing");
 });
 
-router.get("/all", async (req, res) => {
+router.get("/all",withAuth, async (req, res) => {
   try {
     const dbcarData = await Car.findAll({
       where: {
@@ -32,7 +32,7 @@ router.get("/all", async (req, res) => {
     res.status(500).json(err);
   }
 });
-router.get("/car/:id", async (req, res) => {
+router.get("/car/:id",withAuth, async (req, res) => {
   console.log("ID" & req.params.id);
   try {
     const dbCarData = await Car.findByPk(req.params.id);
@@ -49,7 +49,7 @@ router.get("/car/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-router.get("/search", async (req, res) => {
+router.get("/search",withAuth, async (req, res) => {
   var dbcars;
   try {
     if (!req.query.brand_id == 0 && !req.query.type_id == 0) {
