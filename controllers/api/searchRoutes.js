@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { Car } = require("../../models");
 
 //route to display cars based on the selected options from the dropdown
+//Need to remove this API
 router.get("/", async (req, res) => {
   var dbcars;
   try {
@@ -14,15 +15,8 @@ router.get("/", async (req, res) => {
         },
       });
     }
-    console.log("##########################################");
-
     const cars = dbcars.map((e) => e.get({ plain: true }));
     res.status(200).json(cars);
-    // console.log(cars);
-    // res.render("all", {
-    //   cars,
-    //   loggedIn: req.session.loggedIn,
-    // });
   } catch (err) {
     res.status(500).json(err);
   }
