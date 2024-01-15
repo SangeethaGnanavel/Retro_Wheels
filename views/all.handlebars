@@ -1,6 +1,6 @@
      <form class="form search-form">
         <div class="form-group col-md-4">
-         <select class="form-input" id="brand-search">
+         <select class="form-input" id="brand-search" name="brand-search">
             <option value="0">Choose a Brand</option>
           {{#each brands as |brand|}}
             <option value={{brand.id}}>{{brand.brand_name}}</option>
@@ -8,7 +8,7 @@
           </select>
         </div>
         <div class="form-group col-md-4">
-          <select class="form-input" id="type-search">
+          <select class="form-input" id="type-search" name="type-search">
             <option value="0">Choose a Type</option>
            {{#each types as |type|}}
             <option value={{type.id}}>{{type.type_name}}</option>
@@ -16,7 +16,7 @@
           </select>
         </div>
         <div class="form-group col-md-4">
-          <button class="btn btn-primary" type="submit">Search Cars</button>
+          <button class="btn btn-primary" id="submit-button" type="submit">Search Cars</button>
         </div>
       </form>
    
@@ -25,10 +25,10 @@
     <section class="flex-row justify-center">
     {{#each cars as |car|}}
     <section class="card">
-      <a href="/car/{{id}}"></a>
+    <a href="/car/{{id}}">
     <header>{{name}}</header>
      <div class="card-body">
-      <img src="/images/{{filename}}" alt="{{description}}" width="700" height="500" >
+      <img src="/images/{{filename}}" alt="{{description}}" width="300" height="300" >
       <p>Price: {{price}}</p>
     </div>
     </a>
@@ -37,3 +37,4 @@
   </section>
    </section>
   </div>
+  <script src="/js/search.js"></script>
