@@ -6,6 +6,7 @@
     <title>Retro Wheels!</title>
     <link rel="stylesheet" href="/css/jass.css" />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
   </head>
 
   <body>
@@ -23,6 +24,17 @@
       <main class="container container-fluid mt-5">
         <!-- Render the sub layout -->
         {{{body}}}
+        <script src="https://unpkg.com/kursor"></script>
+        <script src="/js/cursorCar.js"></script>
+        
+        <script>
+        new kursor({
+            type: 3
+        })
+        </script>
+   
+    
+    
       </main>
       <footer>
 
@@ -34,6 +46,10 @@
       <script src="/js/logout.js"></script>
     {{/if}}
 
+
+  
   </body>
+  
+  
 
 </html>

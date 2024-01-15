@@ -1,3 +1,5 @@
+
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -53,3 +55,9 @@ document
 document
   .querySelector(".signup-form")
   .addEventListener("submit", signupFormHandler);
+
+
+
+
+
+
