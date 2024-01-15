@@ -52,7 +52,12 @@ router.get("/car/:id", async (req, res) => {
 router.get("/search", async (req, res) => {
   var dbcars;
   try {
-    if (!req.query.brand_id == 0 && !req.query.type_id == 0) {
+    if (
+      typeof req.query["brand_id"] !== "undefined" &&
+      typeof req.query["type_id"] !== "undefined"
+    ) {
+      console.log(req.query.brand_id);
+      console.log(req.query.type_id);
       dbcars = await Car.findAll({
         where: {
           brand_id: req.query.brand_id,
@@ -60,15 +65,24 @@ router.get("/search", async (req, res) => {
           reserved: false,
         },
       });
-    } else if (req.query.brand_id === 0 && !req.query.type_id == 0) {
+    } else if (
+      typeof req.query["brand_id"] === "undefined" &&
+      typeof req.query["type_id"] !== "undefined"
+    ) {
+      console.log(req.query.brand_id);
+      console.log(req.query.type_id);
       dbcars = await Car.findAll({
         where: {
           type_id: req.query.type_id,
           reserved: false,
         },
       });
-    } else if (!req.query.brand_id == 0 && req.query.type_id === 0) {
-      console.log("##########################################");
+    } else if (
+      typeof req.query["brand_id"] !== "undefined" &&
+      typeof req.query["type_id"] === "undefined"
+    ) {
+      console.log(req.query.brand_id);
+      console.log(req.query.type_id);
       dbcars = await Car.findAll({
         where: {
           brand_id: req.query.brand_id,

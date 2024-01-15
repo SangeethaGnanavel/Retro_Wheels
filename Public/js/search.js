@@ -5,27 +5,37 @@ async function filterSelection(event) {
   const type_id = document.querySelector("#type-search").value;
   var url = "/search?";
   let params = new URLSearchParams(url.search);
-  console.log(url + params);
   try {
-    if (!brand_id === 0 && !type_id === 0) {
+    if (brand_id !== "0") {
       params.append("brand_id", brand_id);
-      params.append("type_id", type_id);
-      console.log(url + params);
-    } else if (brand_id === 0 && !type_id === 0) {
-      params.append("type_id", type_id);
-      params.delete("brand_id");
-      console.log(url + params);
-    } else if (!brand_id === 0 && type_id === 0) {
-      params.append("brand_id", brand_id);
-      params.delete("type_id");
-      console.log(url + params);
-    } else if (brand_id === 0 && type_id === 0) {
-      alert("Select Brand or Type to search");
-      console.log(url + params);
     }
+    if (type_id !== "0") {
+      params.append("type_id", type_id);
+    }
+    if (brand_id === "0" && type_id === "0") {
+      alert("Choose search criteria");
+      document.location.replace("/all");
+      return;
+    }
+    // if (brand_id !== "0" && type_id !== "0") {
+    //   params.append("brand_id", brand_id);
+    //   params.append("type_id", type_id);
+    //   console.log(url + params);
+    // } else if (brand_id == "0" && type_id !== "0") {
+    //   params.append("type_id", type_id);
+    //   params.delete("brand_id");
+    //   console.log(url + params);
+    // } else if (brand_id !== "0" && type_id !== "0") {
+    //   params.append("brand_id", brand_id);
+    //   params.delete("type_id");
+    //   console.log(url + params);
+    // } else if (brand_id == "0" && type_id == "0") {
+    //   alert("Select Brand or Type to search");
+    //   console.log(url + params);
+    // }
 
-    console.log(url + params);
-    // document.location.replace(url + params);
+    // console.log(url + params);
+    document.location.replace(url + params);
   } catch (error) {
     alert("An unexpected error occurred");
   }
