@@ -1,12 +1,12 @@
-const router = express.Router();
-const { Car } = require('../../models'); // Adjust the path accordingly
+const router = require("express").Router();
+const { Car } = require("../../models"); // Adjust the path accordingly
 
-router.put('/api/car/:id', async (req, res) => {
+router.put("/:id", async (req, res) => {
+  console.log(req.body);
   try {
     const carUpdate = await Car.update(req.body, {
       where: {
         id: req.params.id,
-        reserved: true,
       },
     });
 
@@ -21,13 +21,12 @@ router.put('/api/car/:id', async (req, res) => {
 
     res.status(200).json(carUpdate); // Sending the updated car data
   } catch (err) {
-    console.error('Error in updating car', err);
+    console.error("Error in updating car", err);
     res.status(500).json(err);
   }
 });
 
 module.exports = router;
-
 
 // router.put('/api/car/:id', async (req, res) => {
 //   try {
@@ -49,21 +48,19 @@ module.exports = router;
 //       return res.status(404).json({ error: 'Car not found' });
 //     }
 
-    // Perform the reservation logic
-    //car.user_id = user_id;
-    //car.reserved = true;
-    // Save the changes to the database
-    //await car.save();
+// Perform the reservation logic
+//car.user_id = user_id;
+//car.reserved = true;
+// Save the changes to the database
+//await car.save();
 
-    // Send a success response
-    //return res.status(200).json({ message: 'Car reservation successful', car });
- //} catch (error) {
-    //console.error('Error in car reservation controller:', error);
-    //return res.status(500).json({ error: 'Internal server error' });
-  //}
+// Send a success response
+//return res.status(200).json({ message: 'Car reservation successful', car });
+//} catch (error) {
+//console.error('Error in car reservation controller:', error);
+//return res.status(500).json({ error: 'Internal server error' });
+//}
 //});
 
-
-
-//update user ID and reserve to true 
-// then car ID to the car ID we created 
+//update user ID and reserve to true
+// then car ID to the car ID we created
