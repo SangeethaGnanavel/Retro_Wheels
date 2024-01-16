@@ -1,4 +1,5 @@
-header, .project:not(:last-child) {
+header,
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -24,12 +25,7 @@ header, .project:not(:last-child) {
 }
 
 .car {
-  position: absolute;    
-  font-size: 24px;     /* delete or keep? */
+  position: absolute;
+  font-size: 24px; /* delete or keep? */
   pointer-events: none;
-
 }
-
-
-
-

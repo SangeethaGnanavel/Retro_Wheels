@@ -133,18 +133,6 @@ const cardata = [
     manufacture_year: 2005,
     filename: "Toyota_Yaris_grey.jpg",
   },
-  {
-    name: "Ford Maverick",
-    type_id: 5,
-    brand_id: 7,
-    price: 40000,
-    colour: "red",
-    reserved: false,
-    user_id: null,
-    kilometers: 1200,
-    manufacture_year: 2024,
-    filename: "Ford_Maverick_Red.jpg",
-  },
 ];
 
 const seedCar = () => Car.bulkCreate(cardata);

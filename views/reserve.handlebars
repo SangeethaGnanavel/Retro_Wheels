@@ -1,67 +1,15 @@
 {{#if loggedIn}}
-  <section class="car">
+  <section>
     <img src="/images/{{car.filename}}" alt="{{car.description}}" />
-    <form class="car-details">
+    <form class="form car-details">
       <h3>{{car.name}}</h3>
       <p> Price: {{car.price}}</p>
       <p> kilometers Run: {{car.kilometers}}</p>
       <p> Manufacture year :{{car.manufacture_year}}</p>
-      <button class="btn btn-primary" data-userid="{{user_id}}">Reserve This Car</button>
+      <button class="btn btn-primary" type="submit">Reserve the Car</button>
     </form>
   </section>
+
 {{/if}}
 <script src="/js/reserve.js"></script>
- <script src="/js/cursorCar.js"></script>
-{{!-- <div class="row">
-  <div class="col-md-5">
-    <h1>Selected Car</h1>
-    <div class="selected-car">
-      <img src="selected_car.jpg" alt="Selected Car">
-    </div>
-  </div>
-  <div class="col-md-7">
-    <h2>Car Information</h2>
-    <div class="p-3">
-      <div class="car-info">
-        <div class="form-group">
-          <label>Brand:</label>
-          <input class="form-input" type="text" value="{{selectedBrand}}">
-        </div>
-        <div class="form-group">
-          <label>Type:</label>
-          <input class="form-input" type="text" value="{{selectedType}}">
-        </div>
-        <div class="form-group">
-          <label>Price:</label>
-          <input class="form-input" type="text" value="{{selectedPrice}}">
-        </div>
-        <div class="form-group">
-          <label>Color:</label>
-          <input class="form-input" type="text" value="{{selectedColor}}">
-        </div>
-        <div class="form-group">
-          <label>Reserved:</label>
-          <input class="form-input" type="text" value="{{isReserved}}">
-        </div>
-        <div class="form-group">
-          <label>Kilometers:</label>
-          <input class="form-input" type="text" value="{{kilometers}}">
-        </div>
-        <div class="form-group">
-          <label>Manufacture Year:</label>
-          <input class="form-input" type="text" value="{{manufactureYear}}">
-        </div>
-        <div class="form-group">
-          <button class="btn btn-primary" onclick="reserveCar()">Reserve This Car</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-  function reserveCar() {
-    // Implement reservation logic here
-    alert("Car Reserved!");
-  }
-</script> --}}
+<script src="/js/cursorCar.js"></script>

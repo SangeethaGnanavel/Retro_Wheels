@@ -1,4 +1,4 @@
-async function reserveCar(event) {
+async function reserveCars(event) {
   event.preventDefault();
 
   // Extract values from the form inputs
@@ -37,30 +37,5 @@ async function reserveCar(event) {
     alert("An unexpected error occurred");
   }
 }
-
 // Add an event listener to the form using the new function
-document.querySelector(".car-details").addEventListener("click", reserveCar);
-
-// function reserveCar(carId) {
-
-//     const reservationData = {
-//       carId: carId,
-
-//     };
-
-//     fetch('/reserveCar', {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify(reservationData),
-//     })
-//       .then(response => response.json())
-//       .then(data => {
-
-//         alert(data.message);
-//       })
-//       .catch(error => {
-//         console.error('Error:', error);
-//       });
-//   }
+document.querySelector(".car-details").addEventListener("submit", reserveCars);
