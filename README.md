@@ -33,5 +33,5 @@
     GitHub: [SangeethaGnanavel, johnwatsoncodes, blessing-o]( https://github.com/SangeethaGnanavel, https://github.com/johnwatsoncodes, https://github.com/blessing-o )
     For additional questions, contact us at our email addresses: sangeetha.gnana@gmail.com, jwatsoncodes@gmail.com, Blessing.okeme@outlook.com.
 
-    ## Screenshot!
-    [retro_wheels_sc](https://github.com/SangeethaGnanavel/Retro_Wheels/assets/56411653/fbe5f833-11c2-42dd-852d-3a492266fc48)
+    ## Screenshot
+    ![retro_wheels_sc](https://github.com/SangeethaGnanavel/Retro_Wheels/assets/56411653/fbe5f833-11c2-42dd-852d-3a492266fc48)
